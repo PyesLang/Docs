@@ -1,0 +1,20 @@
+site_name: Pyes Documentation
+site_url: https://pyes.dev
+
+nav:
+  - Home: index.md
+  - About:
+    - "Intro": about/intro.md
+    - "Why Pyes":
+      - "Why": about/why/why.md
+      - "Core Concepts": about/why/core_concepts.md
+      - "No, but why": about/why/actually_why.md
+
+theme:
+  name: material
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
