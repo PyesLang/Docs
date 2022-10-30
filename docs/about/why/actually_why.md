@@ -78,6 +78,7 @@ Cons:
 ### Extra Resources
 
 [Rust's most important containers](https://www.youtube.com/watch?v=f82wn-1DPas)
+
 [Rust in 100 Seconds](https://www.youtube.com/watch?v=5C_HPTJg5ek)
 
 ## Python
@@ -112,6 +113,7 @@ Cons:
 ### Extra Resources
 
 [mCoding](https://www.youtube.com/c/mCodingWithJamesMurphy)
+
 [Python in 100 Seconds](https://www.youtube.com/watch?v=x7X9w_GIm1s)
 
 ## TypeScript
@@ -141,5 +143,7 @@ Cons:
 ### Extra Resources
 
 [Wordle, but types only](https://www.youtube.com/watch?v=JT30j4nhej4)
+
 [Type Challenges](https://github.com/type-challenges/type-challenges)
+
 [TypeScript in 100 Seconds](https://www.youtube.com/watch?v=zQnBQ4tB3ZA)

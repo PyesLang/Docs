@@ -8,6 +8,7 @@ Pyes is built on some core concepts:
 - Strong type inference (Imma try Hilner-Mindley, we'll see)
 - First-class functions
 - No GC and no manual memory management
+- No null/undefined/None
 - *Blazingly fast*
 
 ## Immutability
@@ -63,3 +64,57 @@ However, they can sometimes make quite significant compromises in some cases due
 Ideally, you shouldn't end up with too much syntax for day-to-day code without sacrificing syntactic power.
 Some examples of this might be in how Haskell mainly just has you add type definitions to functions and not much else.
 Or languages that allow concise list comprehensions in conjunction with other array methods.
+
+## Type Inference
+
+Have you ever got a bit sick and tired of manually making every type explicit, even when to you it's obvious what the type should be?
+That there is evidence that the language has poor type inference.
+
+Some languages (like C#), sacrifice this for low-level performance improvements.
+However, in the process of doing this, they are sacrificing developer readability and writability.
+It makes writing simple data structures a chore when you have to do something like:
+
+```java
+HashMap<string, List<string>> mapping = new HashMap<string, List<string>>([("hi", ["ho"])]);
+```
+
+as opposed to writing:
+
+```c#
+var mapping = new HashMap<string, List<string>>([("hi", ["ho"])]);
+```
+
+or even something like:
+
+```haskell
+mapping = new HashMap([("hi", ["ho"])])
+```
+
+where the type can be inferred by the input to the constructor.
+
+## Memory Management
+
+Now as much as some very clever people have done a lot of work doing some very clever stuff in this field, I am not on of them.
+
+You may ask, "Why not just build the whole thing on top of the JVM or DotNET?".
+Valid question. Moving on from that.
+
+So instead of letting people manually manage their own memory, the goal is to go for compile time memory management.
+Where the relevant data is freed at their end of its scope.
+Which with immutable data and pure functions, shouldn't be too challenging of a concept (in theory...).
+
+## No null values
+
+The [Billion Dollar Mistake](https://www.youtube.com/watch?v=ybrQvs4x0Ps) is one many of us have probably felt at various points in our programming journey.
+It has lead to crashing programs and famously `undefined is not a function` style behaviour in `JS`.
+
+Now some more modern approaches are to have an `Option<T>` type where you have to explicitly handle the `None` possibility.
+I do not believe that is a good enough approach.
+Instead, all data must contain a value that is not null.
+
+## *Blazingly Fast*
+
+When coming up with simple languages, usually people go for interpreted languages that are slow AF.
+Instead, the plan with Pyes is to target LLVM (and whatever Windows uses) and to leverage the already excellent platform there.
+
+An example of this working is none other than `Rust` itself.

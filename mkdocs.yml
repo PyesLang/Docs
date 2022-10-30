@@ -9,6 +9,14 @@ nav:
       - "Why": about/why/why.md
       - "Core Concepts": about/why/core_concepts.md
       - "No, but why": about/why/actually_why.md
+  - Primitives:
+    - "Number": primitives/number.md
+    - "String": primitives/string.md
+    - "Boolean": primitives/boolean.md
+  - "Data Structures":
+    - "Array": data_structures/array.md
+    - "Map": data_structures/map.md
+    - "Struct": data_structures/struct.md
 
 theme:
   name: material
