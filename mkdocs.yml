@@ -9,11 +9,15 @@ nav:
       - "Why": about/why/why.md
       - "Core Concepts": about/why/core_concepts.md
       - "No, but why": about/why/actually_why.md
+  - Basics:
+    - "Variables": basics/variables.md
+    - "Types": basics/types.md
+    - "Generics": basics/generics.md
   - Primitives:
     - "Number": primitives/number.md
     - "String": primitives/string.md
     - "Boolean": primitives/boolean.md
-  - "Data Structures":
+  - Data Structures:
     - "Array": data_structures/array.md
     - "Map": data_structures/map.md
     - "Struct": data_structures/struct.md
@@ -23,6 +27,15 @@ theme:
 
 markdown_extensions:
   - attr_list
+
+  # Emojis support
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+  # Code block syntax highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
